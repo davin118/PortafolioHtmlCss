@@ -228,7 +228,7 @@ span{
 
 .portafolio-container{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     align-items: center;
     gap: 2.5rem;
 }
@@ -243,6 +243,11 @@ span{
 
 .portafolio-box img{
     width: 100%;
+    transition: .5 ease;
+} 
+
+.portafolio-box:hover img{
+    transform: scale(1.1);
 }
 
 .portafolio-box .portafolio-layer{
@@ -252,4 +257,112 @@ span{
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(0 , 0, 0, .1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.portafolio-box:hover .portafolio-layer{
+    transform: translateY(0);
+
+}
+
+.portafolio-layer h4{
+    font-size: 3rem;
+}
+
+.portafolio-layer p{
+    font-size: 1.7rem;
+    margin: .3rem 0 1rem;
+}
+
+.portafolio-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.portafolio-layer a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+/* section contact */
+
+.contact h2{
+    margin-bottom: 3rem;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6;
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem;
+}
+
+.contact form .input-box input{
+    width: 48%;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+.contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--second-bg-color);
+    padding: 2rem 9%;
+}
+
+.footer-text p{
+    font-size: 1.7rem;
+}
+
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+.footer-iconTop:hover a{
+    box-shadow:  0 0 1rem var(--main-color);
+}
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
 }
